@@ -80,14 +80,19 @@
         <em>The margin is set on the input and the plugin moves it to it"s wrapper</em>
       </p>
       <p>
-        <label for="s8">onStep event attached on init</label>
+        <label for="s8">Horizontal layout</label>
         <br />
-        <input type="text" size="2" id="s8" />
+        <input type="text" size="2" id="s8" class="numeric" data-layout="horizontal" /> 
       </p>
       <p>
-        <label for="s9">onStep event attached after init</label>
+        <label for="s9">onStep event attached on init</label>
         <br />
-        <input type="text" size="2" id="s9" class="numeric" />
+        <input type="text" size="2" id="s9" />
+      </p>
+      <p>
+        <label for="s10">onStep event attached after init</label>
+        <br />
+        <input type="text" size="2" id="s10" class="numeric" />
       </p>
       <h2>Events output 
       <a href="#" id="clear-event-log">[clear]</a></h2>
@@ -125,17 +130,17 @@
         });
 
         // Event binding on init
-        $("#s8").stepper({ onStep: stepCallback });
+        $("#s9").stepper({ onStep: stepCallback });
 
         // Event binding after init
-        $("#s9").data("stepper").onStep(stepCallback);
+        $("#s10").data("stepper").onStep(stepCallback);
 
         function stepCallback( val, up )
         {
-            var li = $("&lt;li&gt;&lt;strong&gt;Target:&lt;/strong&gt; #"+this.attr("id")+
-                       " | &lt;strong&gt;Val:&lt;/strong&gt; "+val+
-                       " | &lt;strong&gt;Up:&lt;/strong&gt; "+(up ? "true" :
-"false")+"&lt;/li&gt;");
+            var li = $("<li><strong>Target:</strong> #"+this.attr("id")+
+                       " | <strong>Val:</strong> "+val+
+                       " | <strong>Up:</strong> "+(up ? "true" :
+"false")+"</li>");
             $("#out").append( li );
             li.css("background-color", "#ffc").animate({"background-color": "#eee"});
         }
