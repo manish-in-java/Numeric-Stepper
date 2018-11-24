@@ -44,11 +44,11 @@
         <h1>Numeric Stepper Plug-in for jQuery</h1>
         <p>Simple and highly customizable jQuery plug-in Turns a text input into a numeric stepper.</p>
         <h2>Settings</h2>
-        <p>Every options can be overriden by using it's html5 data attribute equivalent, allowing you to have completely
+        <p>Every option can be overriden by using it's html5 data attribute equivalent, allowing you to have completely
         different steppers with one global call.</p>
         <p>Here's a comprehensive list of all the options.</p>
         <p>
-          <em>The option type appears before each option and default values apper next. If an option can have multiple values, the
+          <em>The option type appears before each option and default values appear next. If an option can have multiple values, the
           default one will be in bold.</em>
         </p>
         <ul>
@@ -114,13 +114,8 @@
         </p>
         <div class="highlight">
           <pre>
-<span class="nt">&lt;input</span> 
-<span class="na">type=</span>
-<span class="s">&quot;text&quot;</span> 
-<span class="na">data-wheel-step=</span>
-<span class="s">&quot;2&quot;</span>
-<span class="nt">&gt;</span>
-</pre>
+<span class="nt">&lt;input</span> <span class="na">type=</span> <span class="s">&quot;text&quot;</span> <span class="na">data-wheel-step=</span> <span class="s">&quot;2&quot;</span> <span class="nt">/&gt;</span>
+          </pre>
         </div>
         <h4>Caveat</h4>
         <p>With the 
@@ -161,64 +156,23 @@
         <h3>Default Settings</h3>
         <div class="highlight">
           <pre>
-<span class="nx">$</span>
-<span class="p">(</span>
-<span class="s1">'.numeric'</span>
-<span class="p">).</span>
-<span class="nx">stepper</span>
-<span class="p">();</span>
-</pre>
+<span class="nx">$</span><span class="p">(</span><span class="s1">'.numeric'</span><span class="p">).</span><span class="nx">stepper</span><span class="p">();</span>
+          </pre>
         </div>
         <h3>Custom settings</h3>
         <div class="highlight">
           <pre>
-<span class="nx">$</span>
-<span class="p">(</span>
-<span class="s1">'.numeric'</span>
-<span class="p">).</span>
-<span class="nx">stepper</span>
-<span class="p">({</span>
-    
-<span class="nx">type</span>
-<span class="o">:</span> 
-<span class="s1">'float'</span>       
-<span class="c1">// Allow floating point numbers</span>
-    
-<span class="nx">wheel_step</span>
-<span class="o">:</span>
-<span class="mi">1</span>
-<span class="p">,</span>       
-<span class="c1">// Wheel increment is 1</span>
-    
-<span class="nx">arrow_step</span>
-<span class="o">:</span> 
-<span class="mf">0.5</span>
-<span class="p">,</span>    
-<span class="c1">// Up/Down arrows increment is 0.5</span>
-    
-<span class="nx">limit</span>
-<span class="o">:</span> 
-<span class="p">[</span>
-<span class="mi">0</span>
-<span class="p">,],</span>         
-<span class="c1">// No negative values</span>
-    
-<span class="nx">onStep</span>
-<span class="o">:</span> 
-<span class="kd">function</span>
-<span class="p">(</span> 
-<span class="nx">val</span>
-<span class="p">,</span> 
-<span class="nx">up</span> 
-<span class="p">)</span>
-    
-<span class="p">{</span>
-        
-<span class="c1">// do something here...</span>
-    
-<span class="p">}</span>
+<span class="nx">$</span><span class="p">(</span><span class="s1">'.numeric'</span><span class="p">).</span><span class="nx">stepper</span><span class="p">({</span>
+  <span class="nx">type</span><span class="o">:</span> <span class="s1">'float'</span><span class="p">,</span>       <span class="c1">// Allow floating point numbers</span>
+  <span class="nx">wheel_step</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>       <span class="c1">// Wheel increment is 1</span>
+  <span class="nx">arrow_step</span><span class="o">:</span> <span class="mf">0.5</span><span class="p">,</span>     <span class="c1">// Up/Down arrows increment is 0.5</span>
+  <span class="nx">limit</span><span class="o">:</span> <span class="p">[</span><span class="mi">0</span><span class="p">,],</span>         <span class="c1">// No negative values</span>
+  <span class="nx">onStep</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">val</span><span class="p">,</span> <span class="nx">up</span> <span class="p">)</span>
+  <span class="p">{</span>
+    <span class="c1">// do something here...</span>
+  <span class="p">}</span>
 <span class="p">});</span>
-</pre>
+          </pre>
         </div>
       </section>
       <footer>
